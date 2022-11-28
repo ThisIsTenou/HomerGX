@@ -17,7 +17,7 @@ ENV USER darkhttpd
 ENV GROUP darkhttpd
 ENV GID 911
 ENV UID 911
-ENV PORT 8080
+ENV PORT 80
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP} && \
     apk add -U --no-cache su-exec darkhttpd
