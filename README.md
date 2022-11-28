@@ -58,7 +58,7 @@ See [documentation](docs/configuration.md) for information about the configurati
 To launch container:
 
 ```sh
-docker run -d -p 8080:8080 -v </your/local/assets/>:/www/assets --restart=always ghcr.io/georgegedox/homergx:latest
+docker run -d -p 8080:80 -v </your/local/assets/>:/www/assets --restart=always ghcr.io/georgegedox/homergx:latest
 ```
 
 Default assets will be automatically installed in the `/www/assets` directory. Use `UID` and/or `GID` env var to change the assets owner (`docker run -e "UID=1000" -e "GID=1000" [...]`).
@@ -72,7 +72,7 @@ Set the port and volume (equivalent to `-p` and `-v` arguments):
 volumes:
   - /your/local/assets/:/www/assets
 ports:
-  - 8080:8080
+  - 8080:80
 ```
 
 To launch container:
